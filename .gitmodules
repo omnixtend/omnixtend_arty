@@ -163,3 +163,6 @@
 [submodule "generators/radiance"]
 	path = generators/radiance
 	url = https://github.com/ucb-bar/radiance.git
+[submodule "generators/omnixtend"]
+	path = generators/omnixtend
+	url = https://github.com/omnixtend/tloe_endpoint
