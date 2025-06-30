@@ -157,7 +157,7 @@ lazy val chipyard = (project in file("generators/chipyard"))
   .dependsOn(testchipip, rocketchip, boom, rocketchip_blocks, rocketchip_inclusive_cache,
     dsptools, rocket_dsp_utils,
     radiance, gemmini, icenet, tracegen, cva6, nvdla, sodor, ibex, fft_generator,
-    constellation, mempress, omnixtend, barf, shuttle, caliptra_aes, rerocc,
+    constellation, mempress, barf, shuttle, caliptra_aes, rerocc,
     compressacc, saturn, ara, firrtl2_bridge, vexiiriscv, tacit)
   .settings(libraryDependencies ++= rocketLibDeps.value)
   .settings(
@@ -330,7 +330,7 @@ lazy val rocketchip_inclusive_cache = (project in file("generators/rocket-chip-i
   .settings(libraryDependencies ++= rocketLibDeps.value)
 
 lazy val fpga_shells = (project in file("./fpga/fpga-shells"))
-  .dependsOn(rocketchip, rocketchip_blocks, omnixtend)
+  .dependsOn(rocketchip, rocketchip_blocks)
   .settings(libraryDependencies ++= rocketLibDeps.value)
   .settings(commonSettings)
 
@@ -424,8 +424,3 @@ lazy val firechip = (project in file("generators/firechip/chip"))
     Test / testOptions += Tests.Argument("-oF")
   )
   .settings(scalaTestSettings)
-
-lazy val omnixtend = (project in file("generators/omnixtend"))
-  .dependsOn(rocketchip, rocketchip_blocks)
-  .settings(libraryDependencies ++= rocketLibDeps.value)
-  .settings(commonSettings)
