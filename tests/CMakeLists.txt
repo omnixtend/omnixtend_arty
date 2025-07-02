@@ -85,6 +85,10 @@ add_executable(gcd gcd.c)
 add_executable(hello hello.c)
 add_executable(mt-hello mt-hello.c)
 add_executable(symmetric symmetric.c)
+add_executable(omnixtend-simple-test omnixtend-simple-test.c)
+add_executable(omnixtend-getput-test omnixtend-getput-test.c)
+add_executable(omnixtend-simple-write omnixtend-simple-write.c)
+add_executable(omnixtend-simple-read omnixtend-simple-read.c)
 
 #################################
 # Disassembly
@@ -123,6 +127,10 @@ add_dump_target(gcd)
 add_dump_target(hello)
 add_dump_target(mt-hello)
 add_dump_target(symmetric)
+add_dump_target(omnixtend-simple-test)
+add_dump_target(omnixtend-getput-test)
+add_dump_target(omnixtend-simple-write)
+add_dump_target(omnixtend-simple-read)
 
 
 # Add custom command to generate spiflash.img from spiflash.py
